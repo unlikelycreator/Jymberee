@@ -1,8 +1,8 @@
 import { User } from "../../models/user.model.js";
 import { Sos } from "../../models/sos.model.js";
 import axios from "axios";
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
 import FormData from "form-data";
 
 const IMAGE_DIR = "/var/www/images";
@@ -244,3 +244,4 @@ const UploadProfilePicture = async (req, res) => {
 };
 
 export { UploadImageBase64, GetUserImages, UploadProfilePicture };
+
