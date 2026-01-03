@@ -1,8 +1,12 @@
 import { User } from "../../models/user.model.js";
 import { Sos } from "../../models/sos.model.js";
 import axios from "axios";
+const fs = require("fs");
+const path = require("path");
 import FormData from "form-data";
 
+const IMAGE_DIR = "/var/www/images";
+const BASE_URL = "https://tapis-one.com/images";
 const DEFAULT_IMAGE_URL = "https://cdn.fileshare.ing/production/morcq4c2iq.jpeg";
 
 /* -------------------------------------------------------------
@@ -58,6 +62,7 @@ async function getAddressFromCoordinates(latitude, longitude) {
 async function uploadBase64Image(image, token, userId) {
   if (!image) return DEFAULT_IMAGE_URL;
 
+  // Validate & extract
   const match = image.match(/^data:image\/([a-zA-Z]+);base64,(.+)$/);
   if (!match) throw new Error("Invalid Base64 image format");
 
@@ -65,22 +70,22 @@ async function uploadBase64Image(image, token, userId) {
   const supported = ["jpeg", "jpg", "png", "gif"];
   if (!supported.includes(ext)) throw new Error("Unsupported image type");
 
-  const buffer = Buffer.from(match[2], "base64");
-  const fileName = `photo-${userId}-${Date.now()}.${ext}`;
+  const base64Data = match[2];
 
-  const formData = new FormData();
-  formData.append("image", buffer, { filename: fileName, contentType: `image/${ext}` });
+  // 🔥 New naming schema: jym-userId-timestamp.ext
+  const fileName = `jym-${userId}-${Date.now()}.${ext}`;
+  const filePath = path.join(IMAGE_DIR, fileName);
 
-  const { data } = await axios.post("https://tapis-one.com/upload/", formData, {
-    headers: {
-      ...formData.getHeaders(),
-      Authorization: `Bearer ${token}`,
-      Accept: "application/json",
-    },
-    timeout: 60000,
-  });
+  // Write file to disk
+  await fs.promises.writeFile(filePath, base64Data, "base64");
 
-  return data.fileUrl || DEFAULT_IMAGE_URL;
+  // Ensure web server can read it
+  await fs.promises.chmod(filePath, 0o644);
+
+  // Public URL
+  const imageUrl = `${BASE_URL}/images/${fileName}`;
+
+  return imageUrl;
 }
 
 /* -------------------------------------------------------------
