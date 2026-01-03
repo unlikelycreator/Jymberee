@@ -83,7 +83,7 @@ async function uploadBase64Image(image, token, userId) {
   await fs.promises.chmod(filePath, 0o644);
 
   // Public URL
-  const imageUrl = `${BASE_URL}/images/${fileName}`;
+  const imageUrl = `${BASE_URL}/${fileName}`;
 
   return imageUrl;
 }
@@ -244,4 +244,5 @@ const UploadProfilePicture = async (req, res) => {
 };
 
 export { UploadImageBase64, GetUserImages, UploadProfilePicture };
+
 
