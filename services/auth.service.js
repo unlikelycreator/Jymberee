@@ -142,18 +142,40 @@ export const registerUser = async (data) => {
 };
 
 // --- Other functions (verifyOTP, login, etc.) remain unchanged ---
-export const verifyOTP = async ({ email, otp }) => {
-  const user = await User.findOne({ email: email?.toLowerCase() });
+export const verifyOTP = async ({ email, phoneNumber, otp }) => {
+  if (!email && !phoneNumber) {
+    throw new AppError('Email or phone number is required', 400);
+  }
+
+  const query = {
+    $or: [
+      email ? { email: email.toLowerCase() } : null,
+      phoneNumber ? { phoneNumber } : null,
+    ].filter(Boolean),
+  };
+
+  const user = await User.findOne(query);
   if (!user) throw new AppError('User not found', 404);
-  if (user.status === 'active') throw new AppError('Already verified', 400);
-  if (user.otp !== otp) throw new AppError('Invalid OTP', 400);
+
+  if (user.status === 'active') {
+    throw new AppError('Already verified', 400);
+  }
+
+  if (user.otp !== otp) {
+    throw new AppError('Invalid OTP', 400);
+  }
 
   user.status = 'active';
   user.otp = undefined;
+
   await user.save();
 
-  return { user, token: user.generateAccessToken() };
+  return {
+    user,
+    token: user.generateAccessToken(),
+  };
 };
+
 
 export const loginUser = async ({ phoneNumber, password }) => {
   const user = await User.findOne({ phoneNumber });

@@ -69,11 +69,21 @@ export const loginSchema = z.object({
 });
 
 export const verifyOTPSchema = z.object({
-  body: z.object({
-    email: z.string().email(),
-    otp: z.string().length(6, 'OTP must be 6 digits'),
-  }),
+  body: z
+    .object({
+      email: z.string().email().optional(),
+      phoneNumber: z.string().optional(),
+      otp: z.string().length(6, 'OTP must be 6 digits'),
+    })
+    .refine(
+      (data) => data.email || data.phoneNumber,
+      {
+        message: 'Email or phone number is required',
+        path: ['email'], // attach error to a field (email is conventional)
+      }
+    ),
 });
+
 
 export const resendOTPSchema = z.object({ body: z.object({ email: z.string().email() }) });
 export const forgotPasswordSchema = z.object({
