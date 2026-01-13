@@ -69,19 +69,11 @@ export const loginSchema = z.object({
 });
 
 export const verifyOTPSchema = z.object({
-  body: z
-    .object({
-      email: z.string().email().optional(),
-      phoneNumber: z.string().optional(),
-      otp: z.string().length(6, 'OTP must be 6 digits'),
-    })
-    .refine(
-      (data) => data.email || data.phoneNumber,
-      {
-        message: 'Email or phone number is required',
-        path: ['email'], // attach error to a field (email is conventional)
-      }
-    ),
+  body: z.object({
+    email: z.string().optional(),
+    phoneNumber: z.string().optional(),
+    otp: z.string().length(6, 'OTP must be 6 digits'),
+  }),
 });
 
 
@@ -109,4 +101,5 @@ export const emergencyContactSchema = z.object({
   }),
 });
 export const deleteAccountSchema = z.object({ body: z.object({ reason: z.string().min(1) }) });
+
 export const deleteByEmailSchema = z.object({ body: z.object({ email: z.string().email() }) });
