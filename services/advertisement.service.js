@@ -7,13 +7,13 @@ const getDefaultV1Ads = () => [
     _id: 'fallback-v1-1',
     title: 'Emergency Helpline',
     imageUrl: 'https://www.verbolabs.com/wp-content/uploads/2024/12/English-Advertising-Introduction-Lesson-Presentation-in-Blue-Yellow-Red-Green-Illustrative-Style-.png',
-    redirectUrl: 'https://yourapp.com',
+    redirectUrl: 'https://apps.apple.com/us/app/jymberee/id6751540033',
   },
   {
     _id: 'fallback-v1-2',
     title: 'Call Police',
     imageUrl: 'https://www.investopedia.com/thmb/XfyZ2qUrLRYm_RZdp9tmnbqMjZs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TailoredAdvertisingGettyImages-1477620685-0729ffd5aa1e4ae794b4a0a7e00de40e.jpg',
-    redirectUrl: 'tel:100',
+    redirectUrl: 'https://apps.apple.com/us/app/jymberee/id6751540033',
   },
 ];
 
@@ -50,4 +50,5 @@ export const getActiveAdvertisements = async (req, limit = 5) => {
     console.error('DB fetch failed:', error.message);
     return isV2 ? getDefaultV2Banners() : getDefaultV1Ads();
   }
+
 };
