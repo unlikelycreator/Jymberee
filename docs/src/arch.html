@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{width:1200px;height:700px;font-family:"Plus Jakarta Sans",sans-serif;background:#fff;color:#0B1020;padding:28px}
+.wrap{position:relative;width:100%;height:100%}
+.col{position:absolute;top:0;bottom:0;border-radius:18px;padding:18px}
+.c1{left:0;width:300px;background:#FFF5F3;border:1.5px solid #FFD9D4}
+.c2{left:410px;width:330px;background:#F3F6FF;border:1.5px solid #D6E0FF}
+.c3{left:850px;width:294px;background:#F6F7FB;border:1.5px solid #E3E6EE}
+h3{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#6B7280;margin-bottom:12px}
+.box{background:#fff;border:1.5px solid #E3E6EE;border-radius:12px;padding:11px 13px;margin-bottom:10px}
+.box b{font-size:15px;display:block}
+.box small{font-size:12px;color:#4B5263;line-height:1.45;display:block;margin-top:3px}
+.red{border-color:#FF8A80}.blue{border-color:#8FA8FF}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:6px;background:#EEF1F6;color:#3B4256;margin:4px 4px 0 0}
+svg{position:absolute;inset:0;pointer-events:none}
+.lbl{font-size:11.5px;font-weight:700;fill:#3B4256}
+</style></head><body><div class="wrap">
+<div class="col c1"><h3>Mobile app (React Native)</h3>
+ <div class="box red"><b>UI screens</b><small>Dashboard, SOS menu, emergency screens, Map, Notifications, Contacts, Profile, Referral</small></div>
+ <div class="box"><b>SOS triggers</b><small>Button · Voice phrases · Shake (Android native service)</small></div>
+ <div class="box"><b>Native Android modules</b><small>ShakeDetectionService, SosDispatcher (OkHttp), BootReceiver</small></div>
+ <div class="box"><b>Local state</b><small>AsyncStorage: token, user, fcmToken<br>SharedPreferences (native): token</small></div>
+ <div class="box red"><b>Receives push alerts</b><small>FCM delivers nearby SOS alerts; tapping one opens the Map. The Map screen calls GraphHopper directly for routes.</small></div>
+ <div class="box"><b>SDKs</b><small><span class="tag">Firebase Messaging</span><span class="tag">Crashlytics</span><span class="tag">AdMob</span><span class="tag">Facebook</span><span class="tag">Maps</span></small></div>
+</div>
+<div class="col c2"><h3>Backend API (Node.js / Express)</h3>
+ <div class="box blue"><b>HTTPS · /api/v3 (used by app)</b><small>helmet · CORS · JSON 50 MB · rate limiter · fallbackToV1</small></div>
+ <div class="box"><b>Routes → Controllers → Services</b><small>auth · images (SOS) · notification · sos · referral · report · ads · banner · web</small></div>
+ <div class="box"><b>Middleware</b><small>authenticate (JWT Bearer) · validate (Zod) · asyncHandler · globalErrorHandler</small></div>
+ <div class="box"><b>MongoDB (Mongoose)</b><small>User · Sos · Report · Advertisement · Install · DeletedUser</small></div>
+ <div class="box"><b>Image storage</b><small>Base64 → /var/www/images → served as https://tapis-one.com/images/…</small></div>
+ <div class="box"><b>Process</b><small>PM2 (fork, 1 instance, port 8001) · /health · Sentry</small></div>
+</div>
+<div class="col c3"><h3>External services</h3>
+ <div class="box"><b>Firebase Cloud Messaging</b><small>Push alerts to nearby users</small></div>
+ <div class="box"><b>BhashSMS WhatsApp API</b><small>SOS message + photo to emergency contacts</small></div>
+ <div class="box"><b>OpenStreetMap Nominatim</b><small>Reverse geocoding: address &amp; postal code</small></div>
+ <div class="box"><b>Gmail SMTP (Nodemailer)</b><small>OTP, temporary password, deletion emails</small></div>
+ <div class="box"><b>GraphHopper</b><small>Route drawing on the Map screen (called from app)</small></div>
+</div>
+<svg viewBox="0 0 1144 644">
+ <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#3B4256"/></marker></defs>
+ <path d="M302 110 H408" stroke="#3B4256" stroke-width="2" marker-end="url(#a)"/>
+ <text x="312" y="100" class="lbl">REST + JWT</text>
+ <path d="M408 160 H302" stroke="#3B4256" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#a)"/>
+ <text x="318" y="180" class="lbl">JSON</text>
+ <path d="M742 110 H848" stroke="#3B4256" stroke-width="2" marker-end="url(#a)"/>
+ <path d="M742 200 H848" stroke="#3B4256" stroke-width="2" marker-end="url(#a)"/>
+ <path d="M742 290 H848" stroke="#3B4256" stroke-width="2" marker-end="url(#a)"/>
+ <path d="M742 380 H848" stroke="#3B4256" stroke-width="2" marker-end="url(#a)"/>
+</svg>
+</div></body></html>

@@ -1,0 +1,64 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;box-sizing:border-box}
+body{width:1200px;height:760px;font-family:"Plus Jakarta Sans",sans-serif;background:#fff}
+text{font-family:"Plus Jakarta Sans",sans-serif}
+.h{font-size:15px;font-weight:800;fill:#0B1020}
+.m{font-size:13px;font-weight:600;fill:#0B1020}
+.s{font-size:11.5px;fill:#4B5263}
+</style></head><body>
+<svg width="1200" height="760" viewBox="0 0 1200 760">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0B1020"/></marker>
+<marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9AA1B2"/></marker></defs>
+<g>
+ <rect x="20" y="16" width="170" height="46" rx="10" fill="#FFF1EF" stroke="#FF8A80" stroke-width="1.5"/><text x="105" y="45" text-anchor="middle" class="h">User's phone</text>
+ <rect x="260" y="16" width="170" height="46" rx="10" fill="#F3F6FF" stroke="#8FA8FF" stroke-width="1.5"/><text x="345" y="45" text-anchor="middle" class="h">Backend API</text>
+ <rect x="500" y="16" width="170" height="46" rx="10" fill="#F6F7FB" stroke="#C9CDD8" stroke-width="1.5"/><text x="585" y="45" text-anchor="middle" class="h">MongoDB</text>
+ <rect x="740" y="16" width="170" height="46" rx="10" fill="#F6F7FB" stroke="#C9CDD8" stroke-width="1.5"/><text x="825" y="45" text-anchor="middle" class="h" style="font-size:13px">Nominatim / WhatsApp</text>
+ <rect x="980" y="16" width="200" height="46" rx="10" fill="#F6F7FB" stroke="#C9CDD8" stroke-width="1.5"/><text x="1080" y="45" text-anchor="middle" class="h">FCM → nearby users</text>
+</g>
+<g stroke="#D5D9E2" stroke-width="2" stroke-dasharray="4 5">
+ <line x1="105" y1="62" x2="105" y2="745"/><line x1="345" y1="62" x2="345" y2="745"/><line x1="585" y1="62" x2="585" y2="745"/><line x1="825" y1="62" x2="825" y2="745"/><line x1="1080" y1="62" x2="1080" y2="745"/>
+</g>
+<rect x="30" y="82" width="150" height="58" rx="8" fill="#FFF8F7" stroke="#FFD9D4"/>
+<text x="105" y="104" text-anchor="middle" class="m">1. Trigger SOS</text><text x="105" y="122" text-anchor="middle" class="s">button / voice / shake</text>
+<text x="105" y="136" text-anchor="middle" class="s">+ GPS (+ photo)</text>
+
+<path d="M105 170 H343" stroke="#0B1020" stroke-width="2" marker-end="url(#a)"/>
+<text x="118" y="160" class="m">2. POST /images/upload-image</text>
+<text x="118" y="190" class="s">{ image (base64|null), latitude, longitude, description }</text>
+
+<path d="M345 225 H583" stroke="#0B1020" stroke-width="2" marker-end="url(#a)"/>
+<text x="360" y="216" class="s">save image URL to user.images</text>
+<path d="M345 262 H583" stroke="#0B1020" stroke-width="2" marker-end="url(#a)"/>
+<text x="360" y="253" class="s">delete old Sos, create new Sos</text>
+
+<path d="M345 305 H823" stroke="#0B1020" stroke-width="2" marker-end="url(#a)"/>
+<text x="360" y="296" class="m">3. Reverse-geocode lat/lng → address</text>
+<path d="M345 350 H823" stroke="#0B1020" stroke-width="2" marker-end="url(#a)"/>
+<text x="360" y="341" class="m">4. WhatsApp template to each emergency contact</text>
+<text x="360" y="368" class="s">name, phone, address, lat, lng, message + image (30 s de-dup lock)</text>
+
+<path d="M343 400 H107" stroke="#9AA1B2" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#r)"/>
+<text x="130" y="392" class="s">200 { imageUrl, sos }</text>
+
+<path d="M105 450 H343" stroke="#0B1020" stroke-width="2" marker-end="url(#a)"/>
+<text x="118" y="440" class="m">5. POST /notification/send-notification</text>
+<text x="118" y="470" class="s">{ title, latitude, longitude, description, env: "prod" }</text>
+
+<path d="M345 510 H823" stroke="#0B1020" stroke-width="2" marker-end="url(#a)"/>
+<text x="360" y="501" class="s">lat/lng → postal code</text>
+<path d="M345 550 H583" stroke="#0B1020" stroke-width="2" marker-end="url(#a)"/>
+<text x="360" y="541" class="s">find users with same postalCode + fcmToken</text>
+<path d="M345 595 H1078" stroke="#0B1020" stroke-width="2" marker-end="url(#a)"/>
+<text x="360" y="586" class="m">6. sendEachForMulticast (batches of 500, high priority)</text>
+<path d="M345 635 H583" stroke="#0B1020" stroke-width="2" marker-end="url(#a)"/>
+<text x="360" y="626" class="s">append notification to each recipient (keep last 5), drop invalid tokens</text>
+
+<rect x="985" y="655" width="190" height="62" rx="8" fill="#FFF8F7" stroke="#FFD9D4"/>
+<text x="1080" y="680" text-anchor="middle" class="m">7. Recipient taps alert</text>
+<text x="1080" y="700" text-anchor="middle" class="s">opens Map with SOS pin</text>
+<path d="M343 690 H107" stroke="#9AA1B2" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#r)"/>
+<text x="130" y="682" class="s">{ success, successCount }  → app shows "SOS sent"</text>
+</svg></body></html>
