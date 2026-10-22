@@ -1,7 +1,7 @@
 # Jymberee – Promotional Video Script (Vertical 9:16, Google Flow, 3 × ~10 s)
 
 **Title:** "Any emergency. One tap."
-**Length:** about 30 seconds (3 clips of about 10 seconds each)
+**Length:** about 38 seconds (3 story clips of about 10 seconds each, plus an 8-second end screen)
 **Format:** **vertical 9:16, 1080 × 1920**, for Instagram Reels, YouTube Shorts, WhatsApp Status and Facebook Stories
 **Tone:** serious and urgent, then reassuring, in the style of a professional public-safety awareness ad.
 **Story in one line:** Emergencies can strike anyone: a medical emergency, a fire, a road accident, a break-in. In every case one tap on Jymberee alerts loved ones and people nearby, and help arrives in seconds.
@@ -52,8 +52,9 @@ The **voice-over** carries the seriousness ("A medical emergency. A fire. An acc
 | **1 – Any moment** | 0–10 s | Four quick vertical shots of about 2.5 s each. **A:** Mr. Rao sits down heavily, holding his chest and short of breath; Ananya rushes to him. **B:** thick smoke and an orange glow pour out of Kabir's kitchen as the alarm flashes. **C:** a scooter lies on its side on the wet road next to a car with hazard lights blinking; Arjun sits on the road holding his arm as Meera runs to him. **D:** Mr. Sharma finds his front door forced open and the room in disarray. Each shot ends with a hand gripping a phone. | "A medical emergency. A fire. An accident. A break-in. Emergencies don't wait." | Tense music hits on each cut, a heartbeat pulse, a smoke alarm, car hazard clicks, rain |
 | **2 – One tap** | 10–20 s | **Shot 1 (0–5 s):** a match-cut sequence of four hands (Ananya, Kabir, Meera, Mr. Sharma), each tapping the same glowing red SOS circle. A red pulse ripples out and fills the frame. **Shot 2 (5–10 s):** the camera rises over the rainy neighbourhood. Phones light up in windows and on the street, and neighbours look at their screens and run to help. | "With Jymberee, one tap sends your live location to your loved ones… and alerts people nearby." | A soft tap on each cut, an alert chime spreading, distant sirens, music builds |
 | **3 – Help arrives** | 20–30 s | Four separate shots, each with only its own people. **1 Fire:** Kabir and the neighbour lady, seen from behind, spray extinguishers forward into the kitchen doorway and the glow and smoke clear. **2 Accident:** Meera and a young couple help Arjun stand up beside his scooter as ambulance lights arrive. **3 Break-in:** a security guard (empty hands) and a neighbour reach Mr. Sharma's door, and the guard puts a reassuring hand on his shoulder. **4 Medical / final:** a paramedic holds an oxygen mask for Mr. Rao, he opens his eyes and smiles, and Ananya hugs him. The camera rises, leaving the upper third as soft light for the logo. | "Whatever the emergency… help, in seconds. Jymberee… your safety net, always on." | Extinguisher hiss, sirens arriving then fading, music turns warm and hopeful |
+| **4 – End screen** | 30–38 s | The soft light from the last shot fades into a clean deep-navy background. The Jymberee logo fades in, the figures light up one by one and a coral SOS pulse ripples out. The tagline appears below, then the Google Play and App Store buttons slide up. Everything holds still. | "Download Jymberee today. Free on Android and iPhone." | Final warm chord, soft chime |
 
-**End card (added in the editor, not generated):** a vertical card with the Jymberee logo in the upper-middle, the line "Any emergency. One tap." or "Your safety net, always on." below it, and Google Play and App Store badges near the bottom, kept above the bottom 15% safe zone. Hold for 3 seconds.
+**End screen (clip 4, 30–38 s):** generated with Prompt 4, using the attached logo file. It shows the logo, the tagline "Any emergency. One tap." / "Your safety net, always on." and the Google Play and App Store download buttons. If the AI text or badges aren't perfect, place the real logo, the text and the official badges on top in the editor (layout table under Prompt 4).
 
 ---
 
@@ -171,6 +172,47 @@ QUALITY: Clean, clear, natural voice with no distortion, no echo, no robotic ton
 
 AVOID: people appearing in the wrong shot, the same person appearing in two shots, fire extinguishers outside shot 1, extinguisher spray pointing away from the fire or toward the camera, police officers, sticks, batons, torches, weapons, props held by the wrong person, mixed-up locations, backgrounds that differ from the attached video, changed room layouts, wrong scale or proportions, horizontal or landscape framing, black bars, letterboxing, subjects cut off at the frame edges, on-screen text, subtitles, captions, logos or brand names on ambulances, watermarks, readable phone screens, distorted hands, extra fingers, warped faces, flicker, morphing, people appearing or disappearing suddenly, characters changing appearance, cartoon or 3D-render look, loud music or sirens over the voice.
 ```
+
+---
+
+### Prompt 4 – "End screen" (30–38 s)
+
+> **Attach the Jymberee logo file** (`marketing/assets/jymberee-logo.png`, the transparent version with the circle of people and the word JYMBEREE) as the reference or ingredient in Flow. Also attach the final frame of clip 3, so the end screen continues smoothly from it.
+>
+> **Important:** AI video often misspells text and redraws logos, and Google and Apple require their official badges on published ads. If the name, tagline or store buttons come out even slightly wrong, keep the animated background and logo reveal from this clip, then place the real logo PNG, the tagline text and the **official** Google Play and App Store badges on top in your editor (CapCut, Premiere, DaVinci). Many brands do this for every end screen.
+
+```
+A clean, premium, modern end screen for a public-safety emergency help app advertisement. Vertical 9:16 portrait format, 8 seconds, one continuous shot, smooth and elegant motion graphics, professional app-launch style.
+
+REFERENCE: The attached logo image is the official Jymberee logo: a circle of seven colourful stylised people (yellow, red, purple, lavender, blue, teal and green) holding hands, with the word JYMBEREE in coral-red capital letters below it. Reproduce this logo exactly as in the attached image, with the same shapes, the same colours, the same proportions and the same lettering. Do not redraw, simplify, restyle, recolour, mirror or add anything to the logo.
+
+TRANSITION (0 to 1.5 seconds): The shot opens on the soft out-of-focus warm lamp light and gentle red and blue light from the final frame of the previous clip. This light smoothly blurs, softens and fades into a clean background: a smooth, very soft gradient from deep navy blue (#0B1020) at the bottom to a slightly lighter navy at the top, with a faint warm coral glow behind the centre of the frame. No room, no people, no objects.
+
+LOGO REVEAL (1.5 to 3.5 seconds): The Jymberee logo from the attached image fades in and scales up gently from 90 percent to 100 percent, perfectly centred horizontally, placed in the upper-middle of the frame (its centre about 35 percent from the top). The seven figures in the logo light up one after another in a quick, smooth circular sequence, then settle. A soft circular pulse of coral-red light ripples outward once from behind the logo, like an SOS signal, and fades. The logo is crisp, sharp, fully visible and stays perfectly still once it has settled.
+
+TAGLINE (3.5 to 5 seconds): Directly below the logo, a single line of clean white text fades in softly, in a modern bold sans-serif font, centred, spelled exactly: Any emergency. One tap.
+Below it, in smaller light-grey text, spelled exactly: Your safety net, always on.
+
+DOWNLOAD BUTTONS (5 to 8 seconds): In the lower part of the frame, about 72 percent from the top and above the bottom safe area, two rounded black app-store download buttons with thin white outlines slide up gently and settle side by side, centred, with equal spacing. The left button shows a simple Google Play triangle icon and the words "GET IT ON Google Play". The right button shows a simple Apple icon and the words "Download on the App Store". Both buttons are the same height, perfectly aligned, sharp and readable. Everything then holds completely still until the end.
+
+LAYOUT: Everything centred horizontally. Leave the top 12 percent and the bottom 15 percent of the frame empty. Generous spacing between the logo, tagline and buttons. Clean, minimal, premium and uncluttered.
+
+AUDIO: The background music from the previous clip resolves into a final warm, uplifting chord, with a soft, gentle chime as the logo pulse appears. The same warm, calm, clear female narrator voice-over as in the previous clips, in her early 30s with a neutral Indian-English accent, speaks slowly and confidently at about 4 seconds: "Download Jymberee today. Free on Android and iPhone." Say the name clearly as "JIM-buh-ree". Voice-over only.
+
+QUALITY: Clean, clear, natural voice with no distortion, no echo, no robotic tone, no stutter, no cut-off words, finishing at least one second before the end. Perfectly sharp, stable, correctly spelled text. Exact logo reproduction. Smooth, slow, elegant animation with no jitter. True vertical composition.
+
+AVOID: changing, redrawing or recolouring the logo, extra or missing figures in the logo, misspelled words, extra words, random letters, gibberish text, blurry or warped text, flickering text, text moving after it settles, extra icons, extra buttons, wrong store names, phones, hands, people, rooms, 3D-rendered logo, glossy cartoon look, busy backgrounds, particles or lens flares covering the text, horizontal framing, black bars, letterboxing, anything placed in the top 12 percent or bottom 15 percent of the frame, music louder than the voice.
+```
+
+**Editor fallback layout (if you add the text and badges yourself):**
+
+| Element | Position (from top of a 1080 × 1920 frame) | Size / style |
+|---|---|---|
+| Logo PNG | centre at ~670 px | ~520 px wide |
+| "Any emergency. One tap." | ~1120 px | white, bold sans-serif (e.g. Plus Jakarta Sans 800 or Poppins Bold), ~64 px |
+| "Your safety net, always on." | ~1200 px | light grey, regular weight, ~40 px |
+| Google Play + App Store badges (official) | ~1400 px, side by side, centred | ~380 px wide each, 40 px gap |
+| Empty safe zones | top 0–230 px, bottom 1630–1920 px | keep clear for platform UI |
 
 ---
 
