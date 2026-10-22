@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "226914528145",
+    "project_id": "jymbereeezeelink",
+    "storage_bucket": "jymbereeezeelink.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226914528145:android:d40e7a969becf3a9bbc830",
+        "android_client_info": {
+          "package_name": "com.jymberee"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAM4xkg4LmV5TBdTbSwgYpO0H-nAd3zf3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

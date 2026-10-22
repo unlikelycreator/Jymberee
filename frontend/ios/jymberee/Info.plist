@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleDisplayName</key>
+    <string>jymberee</string>
+    <key>CFBundleExecutable</key>
+    <string>jymberee</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.jymberee</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>jymberee</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.8</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>FirebaseAppDelegateProxyEnabled</key>
+    <true/>
+    <key>GCMessagingSenderId</key>
+    <string>...</string>
+
+    <!-- ==================== FACEBOOK SDK CONFIGURATION ==================== -->
+    <key>FacebookAppID</key>
+    <string>1667498944670645</string>
+
+    <key>FacebookClientToken</key>
+    <string>83cead9d5372946a72ebef7e5399626a</string>
+
+    <key>FacebookDisplayName</key>
+    <string>Jymberee</string>
+
+    <!-- URL Scheme for Facebook Login -->
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb1667498944670645</string>
+            </array>
+        </dict>
+    </array>
+
+    <!-- Query Schemes for Facebook -->
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>tel</string>
+        <string>fbapi</string>
+        <string>fb-messenger-api</string>
+        <string>fbauth2</string>
+        <string>fbshareextension</string>
+    </array>
+
+    <!-- App Tracking Transparency (Recommended) -->
+    <key>NSUserTrackingUsageDescription</key>
+    <string>Your data will be used to show relevant ads and improve your experience.</string>
+    <!-- =================================================================== -->
+
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>103.118.17.247</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>This app needs microphone access to listen for emergency keywords like "help" or "bachao".</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>This app uses speech recognition to detect emergency phrases for safety alerts.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>We need access to your camera to take profile pictures.</string>
+    <key>NSContactsUsageDescription</key>
+    <string>We need access to your contacts to quickly import them into Jymberee emergency contacts. Please select ‘Share All Contacts’ when prompted for faster setup and future contact changes.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>We use your location to send accurate SOS alerts and connect you with nearby emergency services</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>We use your location to send accurate SOS alerts and connect you with nearby emergency services</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need access to your photo library to select profile pictures.</string>
+    <key>RCTNewArchEnabled</key>
+    <true/>
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>remote-notification</string>
+        <string>fetch</string>
+        <string>processing</string>
+    </array>
+    <key>BGTaskSchedulerPermittedIdentifiers</key>
+    <array>
+        <string>com.jymberee.refresh</string>
+        <string>com.jymberee.cleanup</string>
+    </array>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+        <string>arm64</string>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+    <key>aps-environment</key>
+    <string>development</string>
+</dict>
+</plist>
