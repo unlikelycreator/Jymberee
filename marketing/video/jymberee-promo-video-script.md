@@ -98,17 +98,21 @@ AVOID: horizontal or landscape framing, black bars, letterboxing, subjects cut o
 
 ### Prompt 2 – "One tap" (10–20 s)
 
+> **Attach the clip 1 video** (your final, approved version) as the reference or ingredient in Flow before pasting this prompt. If Flow only accepts images, attach 4 still frames taken from clip 1, one from each shot (living room, kitchen hallway, road junction, apartment entrance), plus the character reference images.
+
 ```
 A realistic, cinematic public-safety awareness advertisement for an emergency help app. Vertical 9:16 portrait format, 10 seconds, continuing the same story in the same Mumbai neighbourhood on the same rainy night, with the same colour grading: warm indoor lamps and orange streetlights against cool blue outdoor light. The mood is urgent but hopeful.
 
-SHOT 1 (0 to 5 seconds), MATCH-CUT TAPS: Four very short vertical close-ups joined by smooth match cuts, each showing a different person's hand holding the same model of black smartphone at the same angle in the centre of the frame. On each phone the screen is dark with one large glowing red circle in the middle, and a thumb taps the red circle firmly once:
-1. Ananya's hand, teal T-shirt sleeve, a warm living-room lamp out of focus behind;
-2. Kabir's hand, grey T-shirt sleeve, grey smoke and an orange glow out of focus behind;
-3. Meera's hand, maroon cardigan sleeve, blinking car hazard lights out of focus behind;
-4. Mr. Sharma's hand, navy blazer sleeve, an open front door out of focus behind.
+REFERENCE VIDEO: The attached video is the previous clip of this same advertisement. Use it as the exact visual reference for every background, location and character in this clip. Reproduce the four locations from the attached video exactly: the same living room (same beige sofa, table lamp, walls and furniture placement), the same kitchen doorway and hallway (same smoke, orange glow and red smoke alarm), the same wet road junction (same scooter lying on its side, same white car with hazard lights, same streetlights and buildings), and the same apartment entrance (same forced-open door, scattered drawers and papers). Keep the exact same scale and proportions of each scene, the same camera height and distance, the same lens look and depth of field, the same lighting direction, light colours and colour grading, and the same weather and wet reflections. Keep every person's face, age, hairstyle, skin tone and clothing exactly as in the attached video. Do not redesign, enlarge, shrink, re-arrange or add anything to these scenes; it must look like the same shoot, filmed seconds later.
+
+SHOT 1 (0 to 5 seconds), MATCH-CUT TAPS: Four very short vertical close-ups joined by smooth match cuts, each showing a different person's hand holding the same model of black smartphone at the same angle in the centre of the frame. Each close-up is filmed in the matching location from the attached video, with that exact background softly out of focus behind the phone. On each phone the screen is dark with one large glowing red circle in the middle, and a thumb taps the red circle firmly once:
+1. Ananya's hand, teal T-shirt sleeve, in the same living room as shot 1 of the attached video, with the same sofa, lamp and Mr. Rao on the sofa out of focus behind;
+2. Kabir's hand, grey T-shirt sleeve, in the same kitchen hallway as shot 2 of the attached video, with the same grey smoke, orange glow and flashing smoke alarm out of focus behind;
+3. Meera's hand, maroon cardigan sleeve, at the same wet road junction as shot 3 of the attached video, with the same fallen scooter, the same white car with blinking hazard lights and Arjun sitting on the road out of focus behind;
+4. Mr. Sharma's hand, navy blazer sleeve, at the same apartment entrance as shot 4 of the attached video, with the same forced-open door and scattered drawers out of focus behind.
 On the last tap the red circle pulses and a soft red glow ripples outward and gently fills the frame.
 
-SHOT 2 (5 to 10 seconds), ALERT SPREADS: The red glow dissolves into a smooth vertical crane shot rising over the rainy neighbourhood at night, with apartment blocks, a lit corner shop and wet streets. Phones light up in several windows and on the street. A shopkeeper in a white shirt, a young couple under a streetlight, an older neighbour lady in a green saree and a building security guard in a khaki uniform look down at their glowing phones, look up with concern and start hurrying in different directions to help.
+SHOT 2 (5 to 10 seconds), ALERT SPREADS: The red glow dissolves into a smooth vertical crane shot rising over the same rainy neighbourhood seen in the attached video, with the same style of apartment blocks, streetlights and wet streets, at a realistic real-world scale, plus a lit corner shop. Phones light up in several windows and on the street. A shopkeeper in a white shirt, a young couple under a streetlight, an older neighbour lady in a green saree and a building security guard in a khaki uniform look down at their glowing phones, look up with concern and start hurrying in different directions to help.
 
 CAMERA: Shot 1 is steady macro close-ups with the phone centred; Shot 2 is a smooth upward crane move. 35 mm cinematic lens, shallow depth of field, natural film grain, true-to-life colours, important action kept in the centre of the frame and away from the top and bottom edges.
 
@@ -118,7 +122,7 @@ AUDIO: A soft, clear tap sound on each cut, then a gentle alert chime spreading 
 
 QUALITY: Clean, clear, natural voice with no distortion, no echo, no robotic tone, no stutter, no cut-off words, clearly audible over music and sirens. Realistic hand anatomy with five fingers, natural thumb taps, phones held steadily without warping or bending. Stable faces, people's appearance and clothing exactly as described. Smooth camera motion. True vertical composition.
 
-AVOID: horizontal or landscape framing, black bars, letterboxing, on-screen text, subtitles, captions, logos, watermarks, readable or changing phone UI, glitching or melting phone screens, phones changing shape or colour, distorted hands, extra fingers, warped faces, flicker, morphing, fast sideways pans, cartoon or 3D-render look, loud music over the voice.
+AVOID: backgrounds that differ from the attached video, changed room layouts or furniture, different street or buildings, wrong scale or proportions, different lighting or colour grade from the attached video, characters looking different from the attached video, horizontal or landscape framing, black bars, letterboxing, on-screen text, subtitles, captions, logos, watermarks, readable or changing phone UI, glitching or melting phone screens, phones changing shape or colour, distorted hands, extra fingers, warped faces, flicker, morphing, fast sideways pans, cartoon or 3D-render look, loud music over the voice.
 ```
 
 ### Prompt 3 – "Help arrives" (20–30 s)
