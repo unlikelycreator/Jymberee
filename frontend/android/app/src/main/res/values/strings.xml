@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">jymberee</string>
+
+    <string name="sos_fire">Fire SOS</string>
+    <string name="sos_fire_long">Trigger Fire SOS</string>
+
+    <string name="sos_theft">Theft SOS</string>
+    <string name="sos_theft_long">Trigger Theft SOS</string>
+
+    <string name="sos_rape">Rape SOS</string>
+    <string name="sos_rape_long">Trigger Rape SOS</string>
+
+    <string name="sos_medical">Medical SOS</string>
+    <string name="sos_medical_long">Trigger Medical SOS</string> 
+
+    <string name="sos_other">Other SOS</string>
+    <string name="sos_other_long">Trigger Other SOS</string>
+   <string name="facebook_app_id">1667498944670645</string>
+   <string name="facebook_client_token">83cead9d5372946a72ebef7e5399626a</string>
+    <!-- Query patterns for Google Assistant voice matching -->
+    <!-- Har type ke liye 5-10+ variations daal sakta hai, better matching ke liye -->
+    <string-array name="sos_fire_queries">
+        <item>fire SOS</item>
+        <item>trigger fire SOS</item>
+        <item>fire emergency</item>
+        <item>SOS fire help</item>
+        <item>आग लग गई है SOS</item>
+        <item>फायर SOS</item>
+        <item>fire help in jymberee</item>
+    </string-array>
+
+    <string-array name="sos_theft_queries">
+        <item>theft SOS</item>
+        <item>trigger theft SOS</item>
+        <item>theft emergency</item>
+        <item>SOS theft help</item>
+        <item>चोरी हो रही है SOS</item>
+        <item>थेफ्ट SOS</item>
+        <item>theft alert jymberee</item>
+    </string-array>
+
+    <string-array name="sos_rape_queries">
+        <item>rape SOS</item>
+        <item>trigger rape SOS</item>
+        <item>emergency SOS rape</item>
+        <item>SOS for safety</item>
+        <item>बलात्कार SOS</item>
+        <item>rape emergency help</item>
+        <!-- Sensitive — Google reject/filter kar sakta hai kuch cases mein -->
+    </string-array>
+
+    <string-array name="sos_medical_queries">
+        <item>medical SOS</item>
+        <item>trigger medical SOS</item>
+        <item>medical emergency</item>
+        <item>SOS medical help</item>
+        <item>मेडिकल इमरजेंसी SOS</item>
+        <item>doctor SOS jymberee</item>
+    </string-array>
+
+    <string-array name="sos_other_queries">
+        <item>other SOS</item>
+        <item>trigger other SOS</item>
+        <item>general emergency</item>
+        <item>SOS other help</item>
+        <item>अन्य SOS</item>
+        <item>any emergency jymberee</item>
+    </string-array>
+
+</resources>
+<!-- <resources>
+    <string name="app_name">jymberee</string>
+
+    <string name="sos_fire">Fire SOS</string>
+    <string name="sos_fire_long">Trigger Fire SOS</string>
+
+    <string name="sos_theft">Theft SOS</string>
+    <string name="sos_theft_long">Trigger Theft SOS</string>
+
+    <string name="sos_rape">Rape SOS</string>
+    <string name="sos_rape_long">Trigger Rape SOS</string>
+
+    <string name="sos_medical">Medical SOS</string>
+    <string name="sos_medical_long">Trigger Medical SOS</string>
+
+    <string name="sos_other">Other SOS</string>
+    <string name="sos_other_long">Trigger Other SOS</string>
+</resources> -->

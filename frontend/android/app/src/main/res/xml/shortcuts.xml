@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Basic: "Hey Google, open jymberee" -->
+    <capability android:name="actions.intent.OPEN_APP">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.jymberee" />
+    </capability>
+
+    <!-- Fire SOS -->
+    <capability android:name="custom.actions.intent.SOS_FIRE"
+        app:queryPatterns="@array/sos_fire_queries">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.jymberee"
+            android:targetClass="com.jymberee.MainActivity">
+            <url-template android:value="sossafety://sos/fire" />
+        </intent>
+    </capability>
+
+    <!-- Theft SOS -->
+    <capability android:name="custom.actions.intent.SOS_THEFT"
+        app:queryPatterns="@array/sos_theft_queries">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.jymberee"
+            android:targetClass="com.jymberee.MainActivity">
+            <url-template android:value="sossafety://sos/theft" />
+        </intent>
+    </capability>
+
+    <!-- Rape SOS (sensitive word pe Google filter kar sakta hai, test carefully) -->
+    <capability android:name="custom.actions.intent.SOS_RAPE"
+        app:queryPatterns="@array/sos_rape_queries">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.jymberee"
+            android:targetClass="com.jymberee.MainActivity">
+            <url-template android:value="sossafety://sos/rape" />
+        </intent>
+    </capability>
+
+    <!-- Medical SOS -->
+    <capability android:name="custom.actions.intent.SOS_MEDICAL"
+        app:queryPatterns="@array/sos_medical_queries">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.jymberee"
+            android:targetClass="com.jymberee.MainActivity">
+            <url-template android:value="sossafety://sos/medical" />
+        </intent>
+    </capability>
+
+    <!-- Other SOS -->
+    <capability android:name="custom.actions.intent.SOS_OTHER"
+        app:queryPatterns="@array/sos_other_queries">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.jymberee"
+            android:targetClass="com.jymberee.MainActivity">
+            <url-template android:value="sossafety://sos/other" />
+        </intent>
+    </capability>
+    </shortcuts>
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:shortcutId="sos_fire"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/sos_fire"
+        android:shortcutLongLabel="@string/sos_fire_long">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="sossafety://sos/fire"
+            android:targetPackage="com.jymberee"
+            android:targetClass="com.jymberee.MainActivity" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="sos_theft"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/sos_theft"
+        android:shortcutLongLabel="@string/sos_theft_long">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="sossafety://sos/theft"
+            android:targetPackage="com.jymberee"
+            android:targetClass="com.jymberee.MainActivity" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="sos_rape"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/sos_rape"
+        android:shortcutLongLabel="@string/sos_rape_long">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="sossafety://sos/rape"
+            android:targetPackage="com.jymberee"
+            android:targetClass="com.jymberee.MainActivity" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="sos_medical"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/sos_medical"
+        android:shortcutLongLabel="@string/sos_medical_long">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="sossafety://sos/medical"
+            android:targetPackage="com.jymberee"
+            android:targetClass="com.jymberee.MainActivity" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="sos_other"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/sos_other"
+        android:shortcutLongLabel="@string/sos_other_long">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="sossafety://sos/other"
+            android:targetPackage="com.jymberee"
+            android:targetClass="com.jymberee.MainActivity" />
+    </shortcut>
+
+</shortcuts> -->
